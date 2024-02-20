@@ -31,3 +31,27 @@ build/
 
 ### VS Code ###
 .vscode/
+# IDE/Editor specific
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.factorypath
+.springBeans
+
+# Compiled Java class files
+/target/
+/build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Application properties
+src/main/resources/application.properties
+
+# Gradle specific
+.gradle/
+build/
+
