@@ -7,9 +7,8 @@ import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
-
 
 @Entity
 @Table(name = "Accomodation")
@@ -25,6 +24,12 @@ public class Accomodation implements Serializable{
     long AccomodationId;
     String name;
     String location;
+    double price;
+    boolean availability;
+    @Temporal(TemporalType.DATE)
+    Date bookedFrom;
+    @Temporal(TemporalType.DATE)
+    Date bookedTo;
     @JsonIgnore
     @ManyToOne
     Logistics logistic ;

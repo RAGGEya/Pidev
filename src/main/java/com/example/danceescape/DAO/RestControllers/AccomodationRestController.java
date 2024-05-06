@@ -4,6 +4,7 @@ import com.example.danceescape.DAO.Services.Accomodation.AccomodationServiceif;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.util.List;
 
 @RestController
@@ -26,4 +27,10 @@ public class AccomodationRestController {
 
     @DeleteMapping("deleteAccomodation")
     void deleteAccomodation(@RequestParam Long id){ serviceif.deleteAccomodation(id);}
+
+    @GetMapping("findAvailableAccomodations")
+    List<Accomodation> findAvailableAccomodations(Date date) {
+        return serviceif.findAvailableAccomodations(date);
+    }
+
 }
